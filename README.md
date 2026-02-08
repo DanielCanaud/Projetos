@@ -21,11 +21,14 @@ Este repositório reúne meus **projetos acadêmicos** e **exercícios práticos
 - **projeto_login-main**  
   Tela de login (HTML/CSS)
 
-- projeto-PetCare-main
-  página de uma petshop (HTML,CSS,JAVASCRIPT)
+- **projeto_Petcare**  
+  página de uma petshop, com consulta, agenda marcaçao (HTML/CSS/JS e API)
 
-- **feliz aniversario**  
-  Página comemorativa
+- **projeto_Fernanda_canaud**  
+  langindpage para uma pianista (HTML/CSS/JS/React/Next.JS)
+
+- **projeto_todo-list**  
+um projeto academico de uma to-do-list (HTML/CSS)
 
 > Adicione ou atualize esta lista conforme novos projetos.
 
