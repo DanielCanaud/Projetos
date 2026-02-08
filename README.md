@@ -21,8 +21,8 @@ Este repositório reúne meus **projetos acadêmicos** e **exercícios práticos
 - **projeto_login-main**  
   Tela de login (HTML/CSS)
 
-- **Love Me Valentine**  
-  Página temática interativa
+- projeto-PetCare-main
+  página de uma petshop (HTML,CSS,JAVASCRIPT)
 
 - **feliz aniversario**  
   Página comemorativa
