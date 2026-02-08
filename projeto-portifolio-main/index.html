@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portifólio - Refatorando</title>
+        <link rel="icon" href="public/images/logo-refatorando.png" type="image/x-icon">
+        <link rel="stylesheet" href="public/css/styles.css">
+        <script>
+            function showMenu(){
+                let menu =document.querySelector("nav ul");
+                if(menu.style.display==="block"){
+                    menu.style.display ="none";
+                }
+                else{
+                    menu.style.display ="block";
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div id="container">
+        <header id="header">
+            <nav>
+                <img src="./public/images/logo-refatorando.png"  alt="logo-refatorando" height="40">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#habilidades">HABILIDADES</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+            <img id="menu-hamburguer"
+            src="./public/images/icon-menu.svg"
+            width="40"
+            onclick="showMenu()"
+            style="cursor: pointer;">
+            </nav>
+        </header>
+        <div id="banner">
+            <div id="banner-shadow">
+            </div>
+            <h1>daniel canaud</h1>
+        </div>
+        <div id="info">
+            <div id="sobre">
+                <div class="title">Sobre mim</div>
+                <h1>Olá, bem vindo ao meu Portifólio</h1>
+                <p>Atualmente cursando <strong>Engenharia de software</strong>, <strong>desenvolvimento Web</strong> a área onde quero  costruir minha carreira. Possuo uma base sólida em <strong>HTML</strong> e <Strong>CSS</Strong>, além de conhecimentos essenciais em <strong>JavaScript</strong> e versionamento com <strong>Git</strong>, habilidades que venho aprimorando constantemente atráveis de estudos e projetos práticos.</p>
+                <p>Meu perfil profissional é marcado pela organização e pelo compromisso com a entrega. Sendo uma pessoa <strong>Autista (nivel 1)</strong>, trago diferenciais como atenção minuciosa aos detalhes, hiperfoco na resolução de problemas e pensamento análitico.</p>
+                <p>Para além do código, valorizo muito as SoftSkils: possuo facilidade para trabalhar  em equipe, adaptalidade e prazo por uma comunicação clara e transparente. sou movido pelo aprendizado contínuo e busco oportunidade de Estágio ou  vaga de júnior para colaborar com projetos reais, trazendo dedicação e vontade de evoluir tecnicamente.</p>
+                <div id="social">
+                    <a href="#"><img src="./public/images/icon-github.png" alt=""></a>
+                    <a href="#"><img src="./public/images/icon-linkedin.png" alt=""></a>
+                    <a href="#"><img src="./public/images/icon-instagram.png" alt=""></a>
+                </div>
+            </div>
+            <div id="habilidades">
+                <div id="resumo">
+                    <h3>desenvolvimento Web</h3>
+                    <p>Construção de projetos web, com atenção minuciosa aos detalhes. Unindo aprendizado contínuo em tecnologia com organização e mindset ágil para crescer  profissionalmente</p>
+                    <a href="#contato">Entrar em contato</a>
+                </div>
+                <h3>Habilidades</h3>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-html5.png" alt="icone html5">
+                    <div>
+                        <span>HTML</span>
+                        <div class="bar">
+                            <div style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-css3.png" alt="icone CSS">
+                    <div>
+                        <span>CSS</span>
+                        <div class="bar">
+                            <div style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-javascript.png" alt="icone JavaScript">
+                    <div>
+                        <span>JavaScript</span>
+                        <div class="bar">
+                            <div style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-git.png" alt="icone Git & Github">
+                    <div>
+                        <span>Git & Github</span>
+                        <div class="bar">
+                            <div style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-typescript.png" alt="icone Typescript">
+                    <div>
+                        <span>Typescript</span>
+                        <div class="bar">
+                            <div style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-tailwind.png" alt="icone Tailwind">
+                    <div>
+                        <span>Tailwind</span>
+                        <div class="bar">
+                            <div style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tecnologias">
+                    <img src="./public/images/icon-node.png" alt="icone Node.js">
+                    <div>
+                        <span>Node.js</span>
+                        <div class="bar">
+                            <div style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projetos">
+            <div class="title">Projetos
+            </div>
+            <div id="galeria_projetos">
+                <a href="#"><img src="./public/images/projetos-login.png" alt="Projeto login"></a>
+                <a href="#"><img src="./public/images/projetos-todo-List.png" alt="Projeto to todo list"></a>
+                <a href="#"><img src="./public/images/projetos-nft.png" alt="Projeto marketiplace"></a>
+                <a href="#"><img src="./public/images/projetos-agendamento.png" alt="Projeto agendamento de mentoria"></a>
+                <a href="#"><img src="./public/images/projetos-plataforma.png" alt="Projeto plataforma LMS"></a>
+                <a href="#"><img src="./public/images/projetos-ecommerce.png" alt="Projeto e-comerce"></a>
+            </div>
+        </div>
+        <div id="contato">
+            <div class="title">Contato</div>
+            <div id="container_formulario">
+                <h4>Envie uma mensagem:</h4>
+                <form>
+                    <input type="text" placeholder="nome*"/>
+                    <input type="text" placeholder="número do celular*">
+                    <input type="text" placeholder="E-mail*"/>
+                    <textarea placeholder="Mensagem"></textarea>
+                    <div>
+                        <input type="submit" value="Enviar Mensagem"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
