@@ -1,0 +1,470 @@
+@import "tailwindcss";
+
+/* ========================= ANIMAÇÕES DE BACKGROUND ========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes nudge {
+  from { transform: translateX(0); }
+  to { transform: translateX(4px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-20px, 30px);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(20px, -30px);
+  }
+}
+
+@keyframes floatMedium {
+  0%, 100% {
+    transform: translate(0, 0px);
+  }
+  33% {
+    transform: translate(15px, 20px);
+  }
+  66% {
+    transform: translate(-10px, -25px);
+  }
+}
+
+@keyframes floatSlowReverse {
+  0%, 100% {
+    transform: translate(0, 0px);
+  }
+  40% {
+    transform: translate(-25px, 15px);
+  }
+  80% {
+    transform: translate(20px, -20px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+@keyframes photoGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15), inset 0 0 20px rgba(255, 255, 255, 0.08), 0 22px 55px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.35), inset 0 0 25px rgba(255, 255, 255, 0.15), 0 26px 70px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes contentPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  }
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes contentShineLoop {
+  0%, 100% {
+    background: rgba(255, 255, 255, 1);
+  }
+  50% {
+    background: rgba(255, 255, 255, 1.02);
+  }
+}
+
+@keyframes buttonShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes iconEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-180deg);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-icon-entrance {
+  animation: iconEntrance 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  opacity: 0;
+}
+
+@keyframes floatEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(50px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-float-entrance {
+  animation: floatEntrance 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 1.2s forwards;
+  opacity: 0;
+}
+
+@keyframes photoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotateZ(-15deg);
+  }
+  60% {
+    transform: scale(1.08) rotateZ(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateZ(0deg);
+  }
+}
+
+@keyframes clickRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(234, 88, 12, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(234, 88, 12, 0);
+  }
+}
+
+@keyframes iconClickRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.animate-photo-entrance {
+  animation: photoEntrance 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards !important;
+  opacity: 0;
+}
+
+/* ========================= BORDA SUAVE NA FOTO ========================= */
+.creator-photo {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: photoGlow 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 10s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: floatMedium 7s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: floatSlowReverse 9s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+.animate-fade-in {
+  animation: fadeIn 600ms ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fadeInUp 600ms ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInUp 600ms ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeInUp 600ms ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+/* ========================= BOTÕES DE CONTEÚDO ========================= */
+.contentLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255, 255, 255, 1);
+  color: rgb(234 88 12); /* orange-600 */
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 600ms ease-out forwards, contentPulse 2.5s ease-in-out infinite;
+}
+
+.contentLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 300ms ease;
+}
+
+.contentLink:hover::before {
+  left: 100%;
+}
+
+.contentLink:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contentLink:active {
+  transform: scale(0.98);
+  animation: clickRipple 600ms ease-out;
+}
+
+/* Premium badge */
+.contentLink.premium {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 246, 143, 0.95));
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.contentLink.premium:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 246, 143, 0.98));
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+/* Badge VIP */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  flex-shrink: 0;
+  animation: fadeIn 400ms ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+/* Seta com mini animação */
+.btnArrow {
+  opacity: 0.85;
+  transition: opacity 250ms ease, transform 250ms ease;
+  flex-shrink: 0;
+}
+
+.contentLink:hover .btnArrow {
+  animation: nudge 650ms ease-in-out infinite alternate;
+}
+
+/* ========================= BOTÕES DE REDES SOCIAIS ========================= */
+.socialBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+  transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.socialBtn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 300ms ease;
+  pointer-events: none;
+}
+
+.socialBtn:hover::after {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.socialBtn:hover {
+  transform: translateY(-5px) scale(1.15);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.socialBtn:active {
+  transform: scale(0.95);
+  animation: iconClickRipple 600ms ease-out;
+}
+
+/* Cores específicas das redes sociais */
+.instagram-social:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.trends-social:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.twitter-social:hover {
+  background: rgba(29, 155, 240, 0.3);
+  color: rgb(29, 155, 240);
+  border-color: rgba(29, 155, 240, 0.5);
+  box-shadow: 0 0 40px rgba(29, 155, 240, 0.4), inset 0 0 20px rgba(29, 155, 240, 0.2);
+}
+
+/* ========================= BOTÃO FLUTUANTE ========================= */
+.igFloat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: rgb(234 88 12); /* orange-600 */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.igFloat:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28), inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.igFloat:active {
+  transform: scale(0.95);
+  animation: iconClickRipple 600ms ease-out;
+}
+
+/* ========================= RESPONSIVO ========================= */
+@media (max-width: 380px) {
+  .contentLink {
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+  }
+
+  .socialBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .igFloat {
+    width: 52px;
+    height: 52px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
