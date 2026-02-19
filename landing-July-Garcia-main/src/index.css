@@ -343,8 +343,8 @@
 
 /* ========================= BOTÕES DE REDES SOCIAIS ========================= */
 .socialBtn {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -399,18 +399,18 @@
   box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.trends-social:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
 .twitter-social:hover {
   background: rgba(29, 155, 240, 0.3);
   color: rgb(29, 155, 240);
   border-color: rgba(29, 155, 240, 0.5);
   box-shadow: 0 0 40px rgba(29, 155, 240, 0.4), inset 0 0 20px rgba(29, 155, 240, 0.2);
+}
+
+.threads-social:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  border-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ========================= BOTÃO FLUTUANTE ========================= */

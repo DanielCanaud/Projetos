@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaInstagram, FaArrowTrendUp, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaThreads, FaTelegram } from "react-icons/fa6";
 import { FaLock, FaRegStar, FaCrown } from "react-icons/fa";
 
 import img1 from "./assets/img-1.jpeg";
@@ -11,9 +11,9 @@ const CONFIG = {
   description: "Conteúdo exclusivo, lifestyle e bastidores — tudo com um toque clean e elegante. Acesse minhas plataformas abaixo 💛",
   creatorImage: img1,
   socialLinks: {
-    instagram: "https://instagram.com/",
-    trends: "https://trends.example.com/",
+    instagram: "https://www.instagram.com/julygarcia.oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     twitter: "https://x.com/",
+    threads: "https://threads.net/",
   },
   contentLinks: [
     {
@@ -35,14 +35,22 @@ const CONFIG = {
       id: "privacy-free",
       label: "Privacy Free",
       icon: FaRegStar,
-      link: "https://privacy.com/",
+      link: "https://privacy.com.br/@julygarciafree",
       isPremium: false,
     },
     {
       id: "privacy-paid",
       label: "Privacy Pago",
       icon: FaLock,
-      link: "https://privacy.com/",
+      link: "https://privacy.com.br/@JulyGarcia",
+      isPremium: true,
+      badge: "VIP",
+    },
+    {
+      id: "telegram-vip",
+      label: "Telegram VIP",
+      icon: FaTelegram,
+      link: "https://t.me/JulyGarcia_bot",
       isPremium: true,
       badge: "VIP",
     },
@@ -145,7 +153,7 @@ export default function App() {
         </section>
 
         {/* Botões de redes sociais com mini animação */}
-        <div className="mt-8 flex justify-center gap-5 animate-fade-in-delay-3">
+        <div className="mt-8 flex justify-center gap-6 animate-fade-in-delay-3">
           <a
             className="socialBtn instagram-social group/icon animate-icon-entrance"
             href={CONFIG.socialLinks.instagram}
@@ -158,26 +166,26 @@ export default function App() {
             <FaInstagram className="group-hover/icon:animate-icon-bounce transition-all" />
           </a>
           <a
-            className="socialBtn trends-social group/icon animate-icon-entrance"
-            href={CONFIG.socialLinks.trends}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Trends"
-            title="Trends"
-            style={{ animationDelay: '0.8s' }}
-          >
-            <FaArrowTrendUp className="group-hover/icon:animate-icon-bounce transition-all" />
-          </a>
-          <a
             className="socialBtn twitter-social group/icon animate-icon-entrance"
             href={CONFIG.socialLinks.twitter}
             target="_blank"
             rel="noreferrer"
             aria-label="Twitter/X"
             title="Twitter/X"
-            style={{ animationDelay: '0.9s' }}
+            style={{ animationDelay: '0.8s' }}
           >
             <FaXTwitter className="group-hover/icon:animate-icon-bounce transition-all" />
+          </a>
+          <a
+            className="socialBtn threads-social group/icon animate-icon-entrance"
+            href={CONFIG.socialLinks.threads}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Threads"
+            title="Threads"
+            style={{ animationDelay: '0.9s' }}
+          >
+            <FaThreads className="group-hover/icon:animate-icon-bounce transition-all" />
           </a>
         </div>
 

@@ -130,14 +130,10 @@ form button:hover{
     border-radius: 5px;
     padding: 10px;
 }
-#google-icon{
-    background-image: url(../images/google.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+#google-container img{
     width: 30px;
     height: 30px;
-
+    margin-right: 10px;
 }
 .login-form-subscribe{
     align-self: center;
