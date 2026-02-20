@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground"
 import Typewriter from "../../../../components/Typewriter/Typewriter"
-import Avatar from "../../../../assets/images/avatar.jpg"
+import Avatar from "../../../../assets/images/Canaud.png"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -10,10 +10,14 @@ import StyledButton from "../../../../components/StyledButton/StyledButton";
 const HeroSection: React.FC = () => {
 
     const StyledImg = styled("img")(({ theme }) => ({
-        width: "80%",
+        width: "270px",
+        height: "270px",
+        objectFit: "cover",
         border: `1px solid ${theme.palette.primary.contrastText}`,
         borderRadius: "50%",
-        position: "relative"
+        position: "relative",
+        display: "block",
+        margin: "0 auto"
     }));
 
     const StyledHero = styled("div")(({ theme }) => ({
@@ -69,7 +73,7 @@ const HeroSection: React.FC = () => {
                             <Typography color="primary.contrastText" variant="h1" pb={2} textAlign="center">
                                 Daniel Canaud
                             </Typography>
-                            <Typewriter text="I'm a Software Engineer" delay={120} variant="h2" color="primary.contrastText" />
+                            <Typewriter text="Desenvolvedor Front-end" delay={120} variant="h2" color="primary.contrastText" />
                             <Box mt={3}>
                                 <Grid container spacing={3} display="flex" justifyContent="center">
                                     <Grid item xs={10} sm={4} md={3}>
