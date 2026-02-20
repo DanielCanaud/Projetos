@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Projeto PetCare",
             subtitle: "Janeiro 2026 - Fevereiro 2026",
-            srcImg: "/src/assets/images/petcare.png",
+            srcImg: "/petcare.png",
             description: "Projeto de um sitie para cuidar dos pets, onde o usuário pode escolher o serviço que deseja, como banho e tosa, consulta veterinária, vacinação entre outras. o usuário ira agendar o serviço colocando seu nome e do pet, telefone data e horario. ",
             technologies: "Technologies: JavaScript, HTML, CSS",
             websiteURL: "https://projetos-ten-teal.vercel.app/",
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Projeto Loja de Carros",
             subtitle: "Novembro 2025 - Dezembro de 2025",
-            srcImg: "/src/assets/images/Loja-carros.png",
+            srcImg: "/Loja-carros.png",
             description: "Projeto academico  para uma loja de carros,  com transição do carros para ir ao seguinte",
             technologies: "Technologies: JavaScript, HTML, CSS",
             websiteURL: "https://projetos-j1f2.vercel.app/",
@@ -31,7 +31,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Project Landing page profissional",
             subtitle: "outubro de 2025 - Dezembro de 2025",
-            srcImg: "/src/assets/images/canaud.png",
+            srcImg: "/canaud.png",
             description: "Projeto profissional feito para entregar uma landing page, com foco em marcação de aulas que que levam ao whatsApp, um piano interativo e um design moderno e responsivo",
             technologies: "Technologies: JavaScript, HTML, CSS, React, Tailwind, next.js",
             websiteURL: "https://v0-fernandacanaud.vercel.app/",
@@ -40,7 +40,7 @@ const ProjectsSection: React.FC = () => {
         {
             title: "Project Linktree",
             subtitle: "Janeiro de 2026 - Janeiro de 2026",
-            srcImg: "/src/assets/images/linktree.png",
+            srcImg: "/linktree.png",
             description: "Projeto pessoal para criar um linktree, tem um design moderno e responsivo, aonde tem botões para acessar minhas redes",
             technologies: "Technologies: JavaScript, HTML, CSS,",
             websiteURL: "https://projetos-zd44.vercel.app/",
