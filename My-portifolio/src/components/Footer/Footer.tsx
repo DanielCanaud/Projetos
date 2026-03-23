@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <Box pt={2} pb={2}>
                 <Container maxWidth="sm">
                     <Box display="flex" alignItems="center" justifyContent="space-around" pb={1}>
-                        <IconButton onClick={() => window.open("https://github.com/DanielCanaud")}>
+                        <IconButton onClick={() => window.open("https://github.com/DanielCanaud/Projetos/tree/main/My-portifolio")}>
                             <GitHubIcon />
                         </IconButton>
                         <IconButton onClick={() => window.open("https://www.linkedin.com/in/danielcanaud-dev/")}>

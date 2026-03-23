@@ -97,7 +97,7 @@ const Hero: React.FC<HeroProps> = ({ image, name = 'Seu Nome', whatsapp = '+5511
                   </IconButton>
                 </Link>
 
-                <Link href="https://github.com/DanielCanaud" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.92 } }}>
+                <Link href="https://github.com/DanielCanaud/Projetos/tree/main/My-portifolio" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.92 } }}>
                   <IconButton aria-label="github" sx={{ color: theme.palette.mode === 'dark' ? '#f2f4f3' : '#111814' }}>
                     <GitHubIcon sx={{ fontSize: 30 }} />
                   </IconButton>

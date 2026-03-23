@@ -610,7 +610,7 @@ const App: React.FC = () => {
 
             <Stack direction="row" spacing={1.25} alignItems="center">
               <IconButton
-                onClick={() => openExternalLink("https://github.com/DanielCanaud")}
+                onClick={() => openExternalLink("https://github.com/DanielCanaud/Projetos/tree/main/My-portifolio")}
                 aria-label="GitHub"
                 sx={{ color: (theme) => (theme.palette.mode === "dark" ? "#f2f5f3" : "#121a14") }}
               >
