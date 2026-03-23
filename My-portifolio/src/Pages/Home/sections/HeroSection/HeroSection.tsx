@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
     }));
 
     const handleWhatsApp = () => {
-        const phone = '351968208602';
+        const phone = '5522992837684';
         const message = 'Olá! Vi seu portfólio e gostaria de conversar.';
         const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');

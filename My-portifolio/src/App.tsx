@@ -59,9 +59,10 @@ const highlightIcons = [
 ];
 
 const contactMessage = encodeURIComponent("Olá, Daniel. Vi seu portfólio e gostaria de conversar sobre um projeto.");
+const whatsappNumber = "5522992837684";
 
 const getProjectPreview = (project: PortfolioProject) =>
-  project.thumbnail ?? project.previewImage ?? `https://image.thum.io/get/width/1200/crop/700/noanimate/${project.websiteURL}`;
+  project.thumbnail ?? getProjectFallbackImage(project);
 
 const getProjectFallbackImage = (project: PortfolioProject) => {
   const [start, end] = project.accent;
@@ -99,6 +100,7 @@ const App: React.FC = () => {
   const { mode, toggleColorMode } = useColorMode();
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>("Todos");
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [imageLoadError, setImageLoadError] = useState<Record<string, boolean>>({});
 
   const collaborativeProjectsCount = portfolioProjects.filter((project) => project.badge === "Colaborativo").length;
   const authorProjectsCount = portfolioProjects.filter((project) => project.badge === "Autoral").length;
@@ -171,7 +173,7 @@ const App: React.FC = () => {
               color="secondary"
               endIcon={<ArrowOutwardRoundedIcon />}
               sx={{ display: { xs: "none", md: "inline-flex" } }}
-              onClick={() => openExternalLink(`https://wa.me/351968208602?text=${contactMessage}`)}
+              onClick={() => openExternalLink(`https://wa.me/${whatsappNumber}?text=${contactMessage}`)}
             >
               Falar no WhatsApp
             </Button>
@@ -190,7 +192,7 @@ const App: React.FC = () => {
                   {item.label}
                 </MenuItem>
               ))}
-              <MenuItem onClick={() => openExternalLink(`https://wa.me/351968208602?text=${contactMessage}`)}>
+              <MenuItem onClick={() => openExternalLink(`https://wa.me/${whatsappNumber}?text=${contactMessage}`)}>
                 Falar no WhatsApp
               </MenuItem>
               <Divider />
@@ -203,7 +205,7 @@ const App: React.FC = () => {
       </AppBar>
 
       <Box component="main">
-        <Hero image={avatarImage} name="Daniel Canaud" whatsapp="351968208602" />
+        <Hero image={avatarImage} name="Daniel Canaud" whatsapp="5522992837684" />
 
         <Box sx={{ py: { xs: 6, md: 8 } }}>
           <Container maxWidth="lg">
@@ -274,18 +276,101 @@ const App: React.FC = () => {
             <Grid container spacing={3}>
               {filteredProjects.map((project) => (
                 <Grid item xs={12} md={6} key={`${project.title}-${project.websiteURL}`}>
-                    <Card sx={{ height: "100%", overflow: "hidden" }}>
-                      <Box sx={{ position: "relative", '&:hover .cardActions': { opacity: 1, pointerEvents: 'auto', transform: 'translateY(0)' } }}>
-                        <CardMedia
-                          component="img"
-                          height="240"
-                          image={getProjectPreview(project)}
-                          alt={`Thumbnail do projeto ${project.title}`}
-                          sx={{ objectFit: "cover", objectPosition: "top center", backgroundColor: "#e2e8f0", transition: 'transform 360ms ease' }}
-                          onError={(event) => {
-                            event.currentTarget.src = getProjectFallbackImage(project);
+                    <Card
+                      sx={{
+                        height: "100%",
+                        overflow: "hidden",
+                        transition: "transform 280ms ease, box-shadow 280ms ease",
+                        "&:hover": {
+                          transform: "translateY(-4px)",
+                        },
+                        "&:hover .projectImage": {
+                          transform: "scale(1.05)",
+                        },
+                        "&:hover .imageOverlay": {
+                          opacity: 1,
+                          pointerEvents: "auto",
+                        },
+                      }}
+                    >
+                      <Box sx={{ position: "relative", height: 220, overflow: "hidden" }}>
+                        <Box
+                          sx={{
+                            height: 34,
+                            px: 1.25,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                            bgcolor: (theme) => (theme.palette.mode === "dark" ? "#1b2320" : "#e7ece8"),
+                            borderBottom: (theme) => `1px solid ${alpha(theme.palette.divider, 0.85)}`,
                           }}
-                        />
+                        >
+                          <Stack direction="row" spacing={0.75} alignItems="center">
+                            <Box sx={{ width: 9, height: 9, borderRadius: "50%", bgcolor: "#ff5f56" }} />
+                            <Box sx={{ width: 9, height: 9, borderRadius: "50%", bgcolor: "#ffbd2e" }} />
+                            <Box sx={{ width: 9, height: 9, borderRadius: "50%", bgcolor: "#27c93f" }} />
+                          </Stack>
+                          <Box
+                            sx={{
+                              flex: 1,
+                              ml: 0.75,
+                              borderRadius: 999,
+                              px: 1.2,
+                              py: 0.45,
+                              fontSize: 11,
+                              lineHeight: 1,
+                              color: "text.secondary",
+                              bgcolor: (theme) => (theme.palette.mode === "dark" ? alpha("#ffffff", 0.08) : alpha("#000000", 0.06)),
+                              whiteSpace: "nowrap",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                            }}
+                          >
+                            {project.thumbLabel}
+                          </Box>
+                        </Box>
+
+                        <Box
+                          sx={{
+                            position: "relative",
+                            height: 186,
+                            bgcolor: project.accent[0],
+                            background: `linear-gradient(135deg, ${project.accent[0]} 0%, ${project.accent[1]} 100%)`,
+                          }}
+                        >
+                          {!imageLoadError[project.title] ? (
+                            <CardMedia
+                              component="img"
+                              image={getProjectPreview(project)}
+                              alt={`Thumbnail do projeto ${project.title}`}
+                              className="projectImage"
+                              sx={{
+                                height: "100%",
+                                objectFit: "cover",
+                                objectPosition: "top center",
+                                transition: "transform 0.4s ease",
+                              }}
+                              onError={() => {
+                                setImageLoadError((prev) => ({ ...prev, [project.title]: true }));
+                              }}
+                            />
+                          ) : (
+                            <Stack
+                              sx={{ height: "100%", px: 2 }}
+                              justifyContent="center"
+                              alignItems="center"
+                              spacing={0.5}
+                            >
+                              <Typography color="#fff" fontWeight={800} textAlign="center" sx={{ textShadow: "0 4px 14px rgba(0,0,0,0.35)" }}>
+                                {project.title}
+                              </Typography>
+                              <Typography color="rgba(255,255,255,0.9)" fontSize={12} textAlign="center">
+                                {project.thumbLabel}
+                              </Typography>
+                            </Stack>
+                          )}
+                        </Box>
+
                         <Stack
                           direction="row"
                           justifyContent="space-between"
@@ -293,7 +378,7 @@ const App: React.FC = () => {
                           sx={{
                             position: "absolute",
                             insetInline: 16,
-                            top: 16,
+                            top: 44,
                           }}
                         >
                           <Chip
@@ -317,15 +402,29 @@ const App: React.FC = () => {
                           </Box>
                         </Stack>
 
-                        <Box className="cardActions" sx={{ position: 'absolute', right: 14, bottom: 14, display: 'flex', gap: 1, opacity: 0, pointerEvents: 'none', transform: 'translateY(8px)', transition: 'all 220ms ease' }}>
-                          <Button size="small" variant="contained" color="secondary" onClick={() => openExternalLink(project.websiteURL)} endIcon={<OpenInNewRoundedIcon />}>
-                            Ver
+                        <Box
+                          className="imageOverlay"
+                          sx={{
+                            position: "absolute",
+                            insetInline: 0,
+                            top: 34,
+                            bottom: 0,
+                            display: "grid",
+                            placeItems: "center",
+                            backgroundColor: "rgba(8, 12, 10, 0.45)",
+                            opacity: 0,
+                            pointerEvents: "none",
+                            transition: "opacity 0.3s ease",
+                          }}
+                        >
+                          <Button
+                            variant="contained"
+                            color="secondary"
+                            endIcon={<OpenInNewRoundedIcon />}
+                            onClick={() => openExternalLink(project.websiteURL)}
+                          >
+                            Ver projeto
                           </Button>
-                          {project.codeURL && (
-                            <Button size="small" variant="outlined" onClick={() => openExternalLink(project.codeURL)}>
-                              Código
-                            </Button>
-                          )}
                         </Box>
                       </Box>
 
@@ -374,14 +473,6 @@ const App: React.FC = () => {
                         </Box>
 
                         <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5}>
-                          <Button
-                            variant="contained"
-                            color="secondary"
-                            endIcon={<OpenInNewRoundedIcon />}
-                            onClick={() => openExternalLink(project.websiteURL)}
-                          >
-                            Ver projeto
-                          </Button>
                           {project.codeURL && (
                             <Button
                               variant="outlined"
@@ -482,7 +573,7 @@ const App: React.FC = () => {
                         variant="contained"
                         color="secondary"
                         startIcon={<WhatsAppIcon />}
-                        onClick={() => openExternalLink(`https://wa.me/351968208602?text=${contactMessage}`)}
+                        onClick={() => openExternalLink(`https://wa.me/${whatsappNumber}?text=${contactMessage}`)}
                       >
                         WhatsApp
                       </Button>

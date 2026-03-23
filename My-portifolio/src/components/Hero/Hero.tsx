@@ -91,19 +91,19 @@ const Hero: React.FC<HeroProps> = ({ image, name = 'Seu Nome', whatsapp = '+5511
               </Box>
 
               <Box sx={{ display: 'flex', gap: 1, justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                <Link href="https://www.linkedin.com" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.9 } }}>
+                <Link href="https://www.linkedin.com/in/danielcanaud-dev/" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.9 } }}>
                   <IconButton aria-label="linkedin" sx={{ color: '#0A66C2' }}>
                     <LinkedInIcon sx={{ fontSize: 30 }} />
                   </IconButton>
                 </Link>
 
-                <Link href="https://github.com" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.92 } }}>
+                <Link href="https://github.com/DanielCanaud" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.92 } }}>
                   <IconButton aria-label="github" sx={{ color: theme.palette.mode === 'dark' ? '#f2f4f3' : '#111814' }}>
                     <GitHubIcon sx={{ fontSize: 30 }} />
                   </IconButton>
                 </Link>
 
-                <Link href="https://www.instagram.com" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.9 } }}>
+                <Link href="https://www.instagram.com/canaudd?igsh=cnZudm5mdWVnaGhi&utm_source=qr" target="_blank" rel="noopener" underline="none" sx={{ '&:hover': { opacity: 0.9 } }}>
                   <IconButton aria-label="instagram" sx={{ color: '#E1306C' }}>
                     <InstagramIcon sx={{ fontSize: 30 }} />
                   </IconButton>

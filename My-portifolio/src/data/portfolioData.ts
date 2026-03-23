@@ -39,6 +39,80 @@ export const projectCategories: ProjectCategory[] = [
 
 export const portfolioProjects: PortfolioProject[] = [
     {
+        title: "PetCare",
+        category: "Landing Page",
+        badge: "Autoral",
+        projectType: "Clínica & Agendamento",
+        description:
+            "Landing page premium para agendamento online, com experiência clara, fluxo de escolha de serviço e confirmação.",
+        role: "Autoria própria: design + implementação da interface e integrações.",
+        stack: ["React", "Next.js"],
+        websiteURL: "https://projetos-ten-teal.vercel.app/",
+        previewImage:
+            "https://image.thum.io/get/width/1200/crop/700/noanimate/https://projetos-ten-teal.vercel.app/",
+        thumbLabel: "petcare.vercel.app",
+        accent: ["#0f766e", "#0b1220"],
+    },
+    {
+        title: "FP selection",
+        category: "Acadêmico",
+        badge: "Autoral",
+        projectType: "Acadêmico",
+        description:
+            "Projeto acadêmico com navegação simples, seções organizadas e apresentação de carros em layout responsivo.",
+        role: "Autoria própria: desenvolvimento do layout e conteúdo com foco em clareza.",
+        stack: ["HTML", "CSS", "JavaScript"],
+        websiteURL: "https://projetos-j1f2.vercel.app/",
+        previewImage:
+            "https://image.thum.io/get/width/1200/crop/700/noanimate/https://projetos-j1f2.vercel.app/",
+        thumbLabel: "fpselection",
+        accent: ["#7c3aed", "#0f172a"],
+    },
+    {
+        title: "Links Daniel Canaud",
+        category: "Landing Page",
+        badge: "Autoral",
+        projectType: "Linktree",
+        description:
+            "Página de links centralizada com ícones de redes sociais e layout limpo para navegação rápida.",
+        role: "Autoria própria: estrutura da página e integração dos links.",
+        stack: ["React", "Vercel"],
+        websiteURL: "https://projetos-zd44.vercel.app/",
+        previewImage:
+            "https://image.thum.io/get/width/1200/crop/700/noanimate/https://projetos-zd44.vercel.app/",
+        thumbLabel: "danielcanaud.links",
+        accent: ["#ec4899", "#3b0764"],
+    },
+    {
+        title: "julygarciafc",
+        category: "Landing Page",
+        badge: "Autoral",
+        projectType: "Landing",
+        description: "Landing criada para apresentação e navegação direta, com design moderno e responsivo.",
+        role: "Autoria própria: desenvolvimento do layout e publicação no Vercel.",
+        stack: ["React", "Vercel"],
+        websiteURL: "https://julygarciafc.vercel.app/",
+        previewImage:
+            "https://image.thum.io/get/width/1200/crop/700/noanimate/https://julygarciafc.vercel.app/",
+        thumbLabel: "julygarciafc",
+        accent: ["#06b6d4", "#0f172a"],
+    },
+    {
+        title: "Fernanda Chaves",
+        category: "Landing Page",
+        badge: "Autoral",
+        projectType: "Aulas de piano",
+        description:
+            "Site/landing para divulgação de aulas de música, com experiência rica em conteúdo e seções bem estruturadas.",
+        role: "Autoria própria: criação e implementação do front-end da experiência.",
+        stack: ["React", "Vercel"],
+        websiteURL: "https://v0-fernandacanaud.vercel.app/",
+        previewImage:
+            "https://image.thum.io/get/width/1200/crop/700/noanimate/https://v0-fernandacanaud.vercel.app/",
+        thumbLabel: "v0-fernandacanaud",
+        accent: ["#f97316", "#431407"],
+    },
+    {
         title: "ClickROI",
         category: "SaaS",
         badge: "Colaborativo",
