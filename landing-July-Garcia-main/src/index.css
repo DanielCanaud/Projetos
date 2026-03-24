@@ -290,9 +290,10 @@
 }
 
 .contentLink:hover {
-  transform: translateY(-5px) scale(1.03);
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px) scale(1.04);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.22), 0 0 0 2px rgba(234, 88, 12, 0.25);
+  border-left: 3px solid rgb(234, 88, 12);
 }
 
 .contentLink:active {
@@ -308,7 +309,8 @@
 
 .contentLink.premium:hover {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 246, 143, 0.98));
-  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 22px 45px rgba(255, 215, 0, 0.28), 0 0 0 2px rgba(255, 193, 7, 0.35);
+  border-left: 3px solid rgb(245, 158, 11);
 }
 
 /* Badge VIP */
@@ -391,26 +393,36 @@
   animation: iconClickRipple 600ms ease-out;
 }
 
-/* Cores específicas das redes sociais */
-.instagram-social:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Instagram — gradiente de marca como cor base */
+.instagram-brand {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 18px rgba(225, 48, 108, 0.25);
+}
+
+.instagram-brand:hover {
+  background: linear-gradient(135deg, #f7b733, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 50px rgba(225, 48, 108, 0.55), inset 0 0 20px rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px) scale(1.2);
+}
+
+/* Twitter / X — cor de marca */
+.twitter-brand {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+}
+
+.twitter-brand:hover {
+  background: rgba(0, 0, 0, 1);
   color: white;
   border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-.twitter-social:hover {
-  background: rgba(29, 155, 240, 0.3);
-  color: rgb(29, 155, 240);
-  border-color: rgba(29, 155, 240, 0.5);
-  box-shadow: 0 0 40px rgba(29, 155, 240, 0.4), inset 0 0 20px rgba(29, 155, 240, 0.2);
-}
-
-.threads-social:hover {
-  background: rgba(0, 0, 0, 0.3);
-  color: rgb(0, 0, 0);
-  border-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px) scale(1.2);
 }
 
 /* ========================= BOTÃO FLUTUANTE ========================= */
