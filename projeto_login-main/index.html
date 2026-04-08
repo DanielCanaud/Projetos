@@ -1,52 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Refatorando</title>
-    <link rel="icon" href="https://cache.refatorando.com/wp-content/uploads/2023/05/Favicon_Refatorando-1-100x100.png" type="image/x-icon">
+    <link rel="icon" href="https://refatorando.com.br/wp-content/uploads/2023/05/Favicon_Refatorando-1-100x100.png" type="image/x-icon">
     <link rel="stylesheet" href="./public/css/styles.css">
+  <script src="./public/JS/script.js"></script>
+    
 </head>
 <body>
     <div class="login-container">
+        <div class="sign-up-form">
+            <div class="sign-up-form-content">
+                <form>
+                    <img src="./public/images/Logo_Horizontal_colorida_Refatorando_1.png" width="200">
+                    <h3>Crie sua conta</h3>
+                    <input type="text" name="name" placeholder="Nome"/>
+                    <input type="email" name="email" placeholder="E-mail"/>
+                    <input type="password" name="password" placeholder="Senha"/>
+                    <input
+                    type="password"
+                    name="re-password"
+                    placeholder="Repita a senha"/>
+
+                    <button type="submit">Criar conta</button>
+                </form>
+                <span class="sign-up-form-login">
+                    já tem uma conta? <a href="#login">Voltar para o login</a>
+                </span>
+            </div>
+        </div>
         <div class="login-text">
             <div class="login-text-content">
-                <h2>
-                Olá! <br>
-                Seja bem vindo(a) de volta.
-            </h2>
-            <span>
-                Faça login para continuar acessando essa página
-            </span>
+                <h2>Olá!<br>
+                    Seja bem-vindo(a) de volta.</h2>
+                <p>Faça login para continuar acessando a página</p>
             </div>
         </div>
         <div class="login-form">
             <div class="login-form-content">
-                <img src="public/images/logo_lumix.png.jpg" alt="imagem de login" width="400">
-                <h3>Faça seu login</h3>
                 <form>
-                    <input type="text" placeholder="E-mail">
-                    <input type="password" placeholder="senha">
+                    <img src="./public/images/Logo_Horizontal_colorida_Refatorando_1.png" width="200">
+                    <h3>Faça seu Login</h3>
+                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="password" name="password" placeholder="Senha">
                     <a href="#">Esqueci minha senha</a>
-                    <button>Entrar</button>
+                    <button type="submit">Entrar</button>
                 </form>
                 <div class="login-form-divider">
                     <div>ou faça login com</div>
                 </div>
                 <a href="#" class="login-form-google">
                     <div id="google-container">
-                            <img src="https://img.icons8.com/?size=40&id=Y6CPYP2Vt8mR&format=png&color=000000" alt="Ícone Threads">
-                            <span id="google-sign-in">Sign in with Threads</span>
-                    </div> 
+                        <div id="google-icon"></div>
+                        <span id="google-sign-in">Sign in with Google</span>
+                    </div>
                 </a>
-                <div class="login-form-subscribe">
-                    Não tem conta? <a href="#">Inscreva-se</a>
-                </div>
-
+                <span class="login-form-subscribe">
+                    Não tem uma conta? <a href="#">Inscreva-se</a>
+                </span>
             </div>
+        </div>
     </div>
-</body>
-
-    
 </body>
 </html>
