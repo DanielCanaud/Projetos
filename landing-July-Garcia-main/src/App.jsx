@@ -47,7 +47,7 @@ const CONFIG = {
       id: "telegram-vip",
       label: "Telegram VIP",
       icon: FaTelegram,
-      link: "https://t.me/JulyGarcia_bot",
+      link: "https://t.me/JulyGarcia_bbot?start=fybot#",
       isPremium: true,
       badge: "VIP",
     },
