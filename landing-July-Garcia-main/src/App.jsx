@@ -15,7 +15,7 @@ const CONFIG = {
   contentLinks: [
     {
       id: "onlyfans-paid",
-      label: "OnlyFans Pago",
+      label: "OnlyFans VIP",
       icon: FaLock,
       link: "https://onlyfans.com/july.garcia",
       isPremium: true,
@@ -30,7 +30,7 @@ const CONFIG = {
     },
     {
       id: "privacy-paid",
-      label: "Privacy Pago",
+      label: "Privacy VIP",
       icon: FaLock,
       link: "https://privacy.com.br/@JulyGarcia",
       isPremium: true,
